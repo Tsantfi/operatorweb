@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    position: relative;
+    top: 100px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    background-color: rgb(237, 255, 249);
+}
+
+.tl{
+    position: absolute;
+    top: -90px;
+    left: 20px;
+    font-style: italic;
+}
+
+button#ilm1{
+    position: absolute;
+    left: 10px;
+    border: none;
+    outline: none;
+    background-color: aquamarine;
+    border-radius: 20px;
+    display: none;
+    z-index: 1;
+}
+
+button#ilm1:hover{
+    background-color: rgba(127, 255, 212, 0.479);
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+button#ilm1:active{
+    background-color: rgba(127, 255, 212, 0.479);
+    transform: scale(0.99);
+    transition: 0.2s;
+}
+
+button#ilm2{
+    position: absolute;
+    right: 10px;
+    border: none;
+    outline: none;
+    background-color: aquamarine;
+    border-radius: 20px;
+}
+
+button#ilm2:hover{
+    background-color: rgba(127, 255, 212, 0.479);
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+button#ilm2:active{
+    background-color: rgba(127, 255, 212, 0.479);
+    transform: scale(0.99);
+    transition: 0.2s;
+}
+
+.fake-btn1, .fake-btn2{
+    padding: 10px;
+}
+
+.content{
+    position: relative;
+    border: none;
+    outline: none;
+    background: rgb(184, 248, 250);
+    border-radius: 10px;
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 160px;
+    overflow: hidden;
+}
+
+.card-items{
+    position: relative;
+    display: flex;
+    gap: 90px;
+}
+
+.card-content{
+    position: absolute;
+    top: 70px;
+}
+
+.card{
+    padding: 20px;
+}
+input[type='text']{
+    border: none;
+    outline: none;
+    border: 1px solid black;
+    box-shadow: 0 0 2px black;
+}
+
+input[type='text']:focus{
+    border: 1px solid blue;
+    box-shadow: 0 0 5px rgb(70, 70, 248);
+}
+
+input[type='submit'], button{
+    border: none;
+    outline: none;
+    background: rgb(131, 176, 228);
+    border-radius: 15px;
+    padding: 2px;
+    margin-top: 5px;
+}
+
+input[type='submit']:hover, button:hover{
+    background: rgba(131, 176, 228, 0.61);
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+input[type='submit']:active ,button:active{
+    background: rgba(131, 176, 228, 0.329);
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+#sp, #sp1, #sp2, #sp3, #sp4, #sp5{
+    position: relative;
+    top: 20px;
+    left: 70px;
+    color: rgb(1, 77, 77);
+    font-weight: bold;
+}
+
+.inf_pl{
+    position: absolute;
+    bottom: -120px;
+}
+
+.adj{
+    display: flex;
+}
+
+.im{
+    width: 30px;
+}
+
+.im1{
+    position: absolute;
+    top: 5px;
+    left: 35px;
+}
+
+.im2{
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+.im3{
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover, .im3:hover{
+    color: rgb(7, 107, 107);
+    text-decoration: underline;
+    transition: 0.2s;
+}
+
+a:active, .im3:active{
+    transform: scale(0.9);
+}
+
+/*Smartphone*/
+@media screen and (max-width:500px) {
+    .inf_pl{
+        bottom: -95px;
+        display: flex;
+        gap: 10px;
+        padding-bottom: 20px;
+    }
+
+    .im{
+        width: 60px;
+    }
+
+    .im1{
+        left: 0;
+        opacity: 0;
+    }
+
+    .im2{
+        position: absolute;
+        left: 50px;
+        opacity: 0;
+    }
+
+    .im3{
+        position: absolute;
+        left: 140px;
+        width: 150px;
+        opacity: 0;
+    }
+
+    .adj:hover .im1{
+        top: 60px;
+        opacity: 1;
+        transition: 0.2s;
+    }
+
+    .adj:hover .im3{
+        top: 60px;
+        opacity: 1;
+        transition: 0.2s;
+    }
+
+    .adj:hover .im2{
+        top: 60px;
+        opacity: 1;
+        transition: 0.2s;
+    }
+
+    .im:hover{
+        transform: scale(1.1);
+        transition: 0.2s;
+    }
+
+    .im:active{
+        transform: scale(0.9);
+        transition: 0.2s;
+    }
+}

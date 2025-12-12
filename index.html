@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcul des nombres</title>
+</head>
+<body>
+    <h1 class="tl">Calculateur <p style="font-size: 12px;">by Tsanta</p></h1>
+    <button id="ilm1" onclick=gauche()><div class="fake-btn1">Avant</div></button>
+    <div class="content">
+    <div class="card-items">
+        <div class="card">
+            <h1 class="t1">Addition</h1>
+            <div class="card-content">
+                <input type="text" placeholder="nombre 1" id="add1"><br>
+                <p style="font-weight: bold; text-align: center;">+</p>
+                <input type="text" placeholder="nombre 2" id="add2"><br>
+                <input type="submit" value="Réponse" onclick=addt()>
+                <button type="button" class="rp1" onclick=eff1()>Effacer</button><br>
+                <span id="sp"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h1 class="t2">Soustra</h1>
+            <div class="card-content" id="el2">
+                <input type="text" placeholder="nombre 1" id="soustr1"><br>
+                <p style="font-weight: bold; text-align: center;">-</p>
+                <input type="text" placeholder="nombre 2" id="soustr2"><br>
+                <input type="submit" value="Réponse" onclick=soustr()>
+                <button type="button" onclick=eff2()>Effacer</button>
+                <span id="sp1"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h1 class="t3">Division</h1>
+            <div class="card-content" id="el3">
+                <input type="text" placeholder="nombre 1" id="divis1"><br>
+                <p style="font-weight: bold; text-align: center;">/</p>
+                <input type="text" placeholder="nombre 2" id="divis2"><br>
+                <input type="submit" value="Réponse" onclick=divis()>
+                <button type="button" onclick=eff3()>Effacer</button>
+                <span id="sp2"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h1 class="t4">Modulo</h1>
+            <div class="card-content" id="el4">
+                <input type="text" placeholder="nombre 1" id="mdl1"><br>
+                <p style="text-align: center;">%</p>
+                <input type="text" placeholder="nombre 2" id="mdl2"><br>
+                <input type="submit" value="Réponse" onclick=mod()>
+                <button type="button" onclick=eff4()>Effacer</button>
+                <span id="sp3"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h1 class="t5">diviseur</h1>
+            <div class="card-content" id="el5">
+                <input type="text" placeholder="nombre 1" id="dvs1"><br>
+                <input type="submit" value="Réponse" onclick=dvs_d()>
+                <button type="button" onclick=eff5()>Effacer</button>
+                <span id="sp4"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h1 class="t5">Multiplication</h1>
+            <div class="card-content" style="padding-left: 15px;" id="el5">
+                <input type="text" placeholder="nombre 1" id="mtl1"><br>
+                <p style="text-align: center;">X</p>
+                <input type="text" placeholder="nombre 2" id="mtl2"><br>
+                <input type="submit" value="Réponse" onclick=mtl()>
+                <button type="button" onclick=eff6()>Effacer</button>
+                <span id="sp5"></span>
+            </div>
+        </div>
+    </div>
+    </div>
+    <button id="ilm2" onclick=droite()><div class="fake-btn2">Après</div></button>
+    <div class="inf_pl">
+        <a href="https://www.facebook.com/tsanta.fifaliana.73"><div class="adj"><img class="im" src="icons8-facebook-nouveau-48.png" alt=""><a href="https://www.facebook.com/tsanta.fifaliana.73" class="im1">Tsanta Fifaliana</a></div></a>
+
+        <a href="https://maps.app.goo.gl/xvMYjr9E5UCehYnP7"><div class="adj"><img class="im" src="icons8-marqueur-80.png" alt=""><a href="https://maps.app.goo.gl/xvMYjr9E5UCehYnP7" class="im2">Tanambao Soatsihadino</a></div></a>
+
+        <div class="adj"><img class="im" src="icons8-whatsapp-48.png" alt=""><p class="im3">+261 38 76 922 69</p></div>
+    </div>
+    <script src="reaction.js"></script>
+</body>
+</html>
