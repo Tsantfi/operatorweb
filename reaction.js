@@ -228,25 +228,77 @@ function eff3(){
 function mod() {
     e4 = mdl1.value;
     e4_4 = mdl2.value;
-    if (e4 == '' || e4_4 == '') {
+
+    if (e4 == 0 && e4_4 == 0) {
+        sp3.style.color = 'rgb(1, 77, 77)';
+        sp3.innerHTML = 'Réponse = ' + 0;
+        sp3.style.left = '30px';
+    }
+
+    else if (e4 == 0 && e4_4 > 0) {
+        sp3.style.color = 'rgb(1, 77, 77)';
+        sp3.innerHTML = 'Réponse = ' + 0;
+        sp3.style.left = '30px';
+    }
+
+    else if (((e4).includes('.') && e4_4 > 0) || ((e4) == 0 && e4_4.includes('.'))) {
+        sp3.style.color = 'rgb(1, 77, 77)';
+        sp3.innerHTML = 'Réponse = ' + 1;
+        sp3.style.left = '30px';
+    }
+
+
+    if(!(e4.includes('.')) || !(e4_4.includes('.'))){
+        if (e4 == '' || e4_4 == '') {
         sp3.style.color = 'red';
         sp3.innerHTML = 'Nombre invalide';
         sp3.style.left = '30px';
     }
 
-    else if ((e4 % -e4_4 == 0) || (-e4 % e4_4 == 0) || (e4 % e4_4 == 0) || (-e4 % -e4_4 == 0)) {
+        else if (e4 % e4_4 == 0) {
         sp3.innerHTML = 'Réponse = ' + 0;
         sp3.style.color = 'rgb(1, 77, 77)';
         sp3.style.left = '30px';
     }
 
-    else if ((e4 % -e4_4 == 1) || (-e4 % e4_4 == 1) || (e4 % e4_4 == 1) || (-e4 % -e4_4 == 1)) {
+        else if ((e4 < e4_4) || (e4 > e4_4)) {
+            sp3.innerHTML = 'Réponse = ' + 1;
+            sp3.style.color = 'rgb(1, 77, 77)';
+            sp3.style.left = '30px';
+    }
+
+        else if ((typeof(Number(e4)) != typeof(e4_4))){
+        sp3.style.color = 'red';
+        sp3.style.left = '30px';
+        sp3.innerHTML = "Incorrecte";
+    }
+
+        else if ((e4 % -e4_4 == 0) || (-e4 % e4_4 == 0) || (e4 % e4_4 == 0) || (-e4 % -e4_4 == 0)) {
+            sp3.innerHTML = 'Réponse = ' + 0;
+            sp3.style.color = 'rgb(1, 77, 77)';
+            sp3.style.left = '30px';
+    }
+
+        else if ((e4 % e4_4 == 1) || (-e4 % e4_4 == 1) || (e4 % -e4_4 == 1) || (-e4 % -e4_4 == 1)) {
+            sp3.innerHTML = 'Réponse = ' + 1;
+            sp3.style.color = 'rgb(1, 77, 77)';
+            sp3.style.left = '30px';
+
+    }}
+
+    else if((e4 < e4_4) || (e4 > e4_4)){
         sp3.innerHTML = 'Réponse = ' + 1;
         sp3.style.color = 'rgb(1, 77, 77)';
         sp3.style.left = '30px';
     }
 
-    else if(e4.includes('.') % 2 == 1 || e4_4.includes('.') % 2 == 1){
+    else if((e4.includes('.') % e4_4.includes('.')) == 0){
+        sp3.innerHTML = 'Réponse = ' + 0;
+        sp3.style.color = 'rgb(1, 77, 77)';
+        sp3.style.left = '30px';
+    }
+
+    else if((e4.includes('.') % e4_4.includes('.')) == 1){
         sp3.innerHTML = 'Réponse = ' + 1;
         sp3.style.color = 'rgb(1, 77, 77)';
         sp3.style.left = '30px';
@@ -468,4 +520,5 @@ function eff6(){
     mtl2.value = '';
     sp5.innerHTML = '';
 }
+
 
