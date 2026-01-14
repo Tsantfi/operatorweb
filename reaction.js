@@ -196,6 +196,12 @@ function divis() {
         sp2.style.left = '30px';
     }
 
+    else if (e3_3 == 0 ){
+        sp3.style.color = 'red';
+        sp3.style.left = '30px';
+        sp3.innerHTML = "division par 0";
+     }
+
     else if (e3 == '' || e3_3 == '') {
         sp2.style.color = 'red';
         sp2.innerHTML = 'Nombre invalide';
@@ -229,11 +235,17 @@ function mod() {
     e4 = mdl1.value;
     e4_4 = mdl2.value;
 
-    if (e4 == 0 && e4_4 == 0) {
+    if (e4 == 0 && e4_4 == 0 ) {
         sp3.style.color = 'rgb(1, 77, 77)';
         sp3.innerHTML = 'Réponse = ' + 0;
         sp3.style.left = '30px';
     }
+
+     else if (e4_4 == 0 ){
+        sp3.style.color = 'red';
+        sp3.style.left = '30px';
+        sp3.innerHTML = "Modulo par 0";
+     }
 
     else if (e4 == 0 && e4_4 > 0) {
         sp3.style.color = 'rgb(1, 77, 77)';
@@ -520,5 +532,6 @@ function eff6(){
     mtl2.value = '';
     sp5.innerHTML = '';
 }
+
 
 
